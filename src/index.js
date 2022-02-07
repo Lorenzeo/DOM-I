@@ -40,3 +40,29 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const featuresText = document.querySelector(".text-content")
+featuresText.textContent = siteContent["main-content"]["features-content"]
+
+const aboutText = document.querySelector(".text-content:nth-child(2)")
+aboutText.textContent = siteContent["main-content"]["about-content"]
+
+const servicesText = document.querySelector(".bottom-content .text-content")
+servicesText.textContent = siteContent["main-content"]["services-content"]
+
+const productText = document.querySelector(".bottom-content .text-content:nth-child(2)")
+productText.textContent = siteContent["main-content"]["product-content"]
+
+const visionText = document.querySelector(".bottom-content .text-content:nth-child(3)")
+visionText.textContent = siteContent["main-content"]["vision-content"]
+
+
+const ctaImg = document.querySelector('#cta-img')
+ctaImg.src = siteContent.images["cta-img"]
+
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = siteContent.images["logo-img"]
+
+const accentImg = document.querySelector('#middle-img')
+accentImg.src = siteContent.images["accent-img"]
+
