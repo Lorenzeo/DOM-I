@@ -1,3 +1,4 @@
+// const { createHtmlTagObject } = require("html-webpack-plugin");
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
     "nav-item-1": "Services",
@@ -41,28 +42,67 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 console.log('project wired!')
 
-const featuresText = document.querySelector(".text-content")
-featuresText.textContent = siteContent["main-content"]["features-content"]
-
-const aboutText = document.querySelector(".text-content:nth-child(2)")
-aboutText.textContent = siteContent["main-content"]["about-content"]
-
-const servicesText = document.querySelector(".bottom-content .text-content")
-servicesText.textContent = siteContent["main-content"]["services-content"]
-
-const productText = document.querySelector(".bottom-content .text-content:nth-child(2)")
-productText.textContent = siteContent["main-content"]["product-content"]
-
-const visionText = document.querySelector(".bottom-content .text-content:nth-child(3)")
-visionText.textContent = siteContent["main-content"]["vision-content"]
+//Top Content
+const topContent = document.querySelector(".top-content")
+topContent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+topContent.children[0].children[1].textContent = siteContent["main-content"]["features-content"]
+topContent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"]
+topContent.children[1].children[1].textContent = siteContent["main-content"]["about-content"]
 
 
+//Bottom Content
+const bottomContent = document.querySelector(".bottom-content")
+bottomContent.children[0].children[0].textContent = siteContent["main-content"]["services-h4"]
+bottomContent.children[0].children[1].textContent = siteContent["main-content"]["services-content"]
+bottomContent.children[1].children[0].textContent = siteContent["main-content"]["product-h4"]
+bottomContent.children[1].children[1].textContent = siteContent["main-content"]["product-content"]
+bottomContent.children[2].children[0].textContent = siteContent["main-content"]["vision-h4"]
+bottomContent.children[2].children[1].textContent = siteContent["main-content"]["vision-content"]
+
+
+
+// const servicesText = document.querySelector(".bottom-content .text-content h4")
+// servicesText.textContent = siteContent["main-content"]["services-h4"]
+// const servicesHeader = document.querySelector(".bottom-content .text-content p")
+// servicesHeader.textContent = siteContent["main-content"]["services-content"]
+// //product
+// const productText = document.querySelector(".bottom-content .text-content h4:nth-child(2)")
+// productText.textContent = siteContent["main-content"]["product-h4"]
+// const productHeader = document.querySelector(".bottom-content .text-content p:nth-child(2)")
+// productHeader.textContent = siteContent["main-content"]["product-content"]
+// //vision
+// const visionText = document.querySelector(".bottom-content .text-content:nth-child(3)")
+// visionText.textContent = siteContent["main-content"]["vision-content"]
+// const visionHeader = document.querySelector(".bottom-content .text-content:nth-child(3")
+// visionHeader.textContent = document.querySelector["main-content"]["vision-content"]
+
+//cta img
 const ctaImg = document.querySelector('#cta-img')
 ctaImg.src = siteContent.images["cta-img"]
-
+//main logo
 const logoImg = document.querySelector('#logo-img')
 logoImg.src = siteContent.images["logo-img"]
-
+//middle img
 const accentImg = document.querySelector('#middle-img')
 accentImg.src = siteContent.images["accent-img"]
-
+//footer link
+const footerLink = document.querySelector("footer a")
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add("bold")
+//contact list
+const contact = document.querySelector("section.contact")
+contact.children[0].textContent = siteContent.contact["contact-h4"]
+contact.children[1].textContent = siteContent.contact["address"]
+contact.children[2].textContent = siteContent.contact["phone"]
+contact.children[3].textContent = siteContent.contact["email"]
+//nav items
+const headerLink = document.querySelector("nav")
+headerLink.children[0].textContent = siteContent.nav["nav-item-1"]
+headerLink.children[1].textContent = siteContent.nav["nav-item-2"]
+headerLink.children[2].textContent = siteContent.nav["nav-item-3"]
+headerLink.children[3].textContent = siteContent.nav["nav-item-4"]
+headerLink.children[4].textContent = siteContent.nav["nav-item-5"]
+headerLink.children[5].textContent = siteContent.nav["nav-item-6"]
+//nav italic
+const headerA = document.querySelectorAll("nav a")
+headerA.classList.add("italic")
