@@ -60,7 +60,9 @@ bottomContent.children[2].children[0].textContent = siteContent["main-content"][
 bottomContent.children[2].children[1].textContent = siteContent["main-content"]["vision-content"]
 
 
-
+const ctaText = document.querySelector(".cta-text")
+ctaText.children[0].textContent = siteContent.cta.h1
+ctaText.children[1].textContent = siteContent.cta.button
 // const servicesText = document.querySelector(".bottom-content .text-content h4")
 // servicesText.textContent = siteContent["main-content"]["services-h4"]
 // const servicesHeader = document.querySelector(".bottom-content .text-content p")
@@ -104,5 +106,5 @@ headerLink.children[3].textContent = siteContent.nav["nav-item-4"]
 headerLink.children[4].textContent = siteContent.nav["nav-item-5"]
 headerLink.children[5].textContent = siteContent.nav["nav-item-6"]
 //nav italic
-const headerA = document.querySelectorAll("nav a")
-headerA.classList.add("italic")
+const headerA = document.querySelectorAll("nav")
+headerA.style.fontStyle = "italic"
