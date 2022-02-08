@@ -106,5 +106,6 @@ headerLink.children[3].textContent = siteContent.nav["nav-item-4"]
 headerLink.children[4].textContent = siteContent.nav["nav-item-5"]
 headerLink.children[5].textContent = siteContent.nav["nav-item-6"]
 //nav italic
-const headerA = document.querySelectorAll("nav")
-headerA.style.fontStyle = "italic"
+const headerA = document.querySelectorAll("header nav a")
+headerA.classList.add("italic")
+console.log(headerA)
